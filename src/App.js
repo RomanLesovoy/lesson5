@@ -7,6 +7,9 @@ import UserInfo from './components/UserInfo'
 import Counter from './components/Counter'
 import CounterClass from './components/CounterClass'
 import ComponentContext from './components/ComponentUseContext'
+import Universities from "./components/Universities";
+import UserFromApi from "./components/UserFromApi";
+import Post from "./components/Post";
 
 function App() {
   const [user, setUser] = useState(userState);
@@ -28,6 +31,9 @@ function App() {
         <Provider store={store}>
           <Counter />
           <CounterClass />
+          <Universities />
+          <UserFromApi />
+          <Post title={'title'} text={'text'} id={234} />
         </Provider>
       </header>
     </div>

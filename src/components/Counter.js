@@ -1,9 +1,12 @@
 import React from 'react';
-import { decrement, increment, selectCounter } from '../store/reducers/counter'
+import { increment, decrement, incrementBy } from "../store/actions";
+import { selectCounterOld } from "../store/reducers/counterOld";
 import { useDispatch, useSelector } from 'react-redux'
+import { fetchUniversities } from "../store/middleware/universities";
+import { fetchUser } from "../store/middleware/user";
 
 function Counter() {
-  const count = useSelector(selectCounter);
+  const count = useSelector(selectCounterOld);
   const dispatch = useDispatch();
 
   return (
@@ -22,6 +25,14 @@ function Counter() {
         >
           Decrement
         </button>
+        <button
+            aria-label="Increment value by"
+            onClick={() => dispatch(incrementBy(5))}
+        >
+          Increment by
+        </button>
+        <button onClick={() => dispatch(fetchUniversities())}>Fetch Universities</button>
+        <button onClick={() => dispatch(fetchUser('id'))}>Fetch User</button>
       </div>
     </div>
   )
