@@ -28,5 +28,5 @@ export const userReducer = (state = { userData: null, status: '' }, action: Acti
     }
 }
 
-export const selectUser = (state) => state.userReducer.userData;
-export const selectUserStatus = (state) => state.userReducer.status;
+export const selectUser = (state: any) => state.userReducer.userData;
+export const selectUserStatus = (state: any) => state.userReducer.status;

@@ -1,9 +1,9 @@
-import {setUser, setUserPending} from "../actions";
+import { setUser, setUserPending } from "../actions";
 import { User } from '../reducers/user'
 
 export function fetchUser(id: string) {
     // The `extraArgument` is the third arg for thunk functions
-    return async (dispatch: (param1: object) => {}, getState) => {
+    return async (dispatch: (param1: object) => {}) => {
         // ...
         dispatch(setUserPending());
         const response = await fetch('https://randomuser.me/api/');

@@ -1,9 +1,9 @@
 import React from 'react';
-import { increment, decrement, incrementBy } from "../store/actions";
-import { selectCounterOld } from "../store/reducers/counterOld";
+import { increment, decrement, incrementBy } from "../store/old/actions";
+import { selectCounterOld } from "../store/old/reducers/counterOld";
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchUniversities } from "../store/middleware/universities";
-import { fetchUser } from "../store/middleware/user";
+// import { fetchUniversities } from "../store/new/middleware/universities";
+import { fetchUser } from "../store/old/middleware/user";
 
 function Counter() {
   const count = useSelector(selectCounterOld);
@@ -31,7 +31,7 @@ function Counter() {
         >
           Increment by
         </button>
-        <button onClick={() => dispatch(fetchUniversities())}>Fetch Universities</button>
+        {/*<button onClick={() => dispatch(fetchUniversities())}>Fetch Universities</button>*/}
         <button onClick={() => dispatch(fetchUser('id'))}>Fetch User</button>
       </div>
     </div>

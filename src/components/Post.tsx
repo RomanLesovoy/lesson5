@@ -1,13 +1,13 @@
 import React from 'react';
-import { Post } from "../types/Post";
+import { Post as PostInterface } from "../types/Post";
 
-const defaultProps: Post = {
+const defaultProps: PostInterface = {
     title: '',
     text: '',
     id: 1,
     date: new Date()
 }
-const Post = (props: Post = defaultProps) => {
+const Post = (props: PostInterface = defaultProps) => {
     return (
         <div className="post">
             <div className="title">{ props.title }</div>

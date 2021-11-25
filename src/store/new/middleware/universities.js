@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import {  actionTypes } from "../actions";
+import { actionTypes } from "../../old/actions";
 
 export const fetchUniversities = createAsyncThunk(actionTypes.fetchUniversities, async () => {
     const response = await fetch('http://universities.hipolabs.com/search?country=Ukraine');

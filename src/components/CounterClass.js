@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { decrement, increment, selectCounter } from '../store/reducers/counter'
+import {selectCounterOld} from "../store/old/reducers/counterOld";
+import { decrement, increment, incrementBy } from "../store/old/actions";
 
 class CounterClass extends React.Component {
     render() {
@@ -9,7 +10,7 @@ class CounterClass extends React.Component {
             <div>
                 <button
                   aria-label="Increment value"
-                  onClick={() => incrementCounter()}
+                  onClick={() => incrementBy()}
                 >
                   Increment
                 </button>
@@ -20,7 +21,7 @@ class CounterClass extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-    counter: selectCounter(state), // state.counterReducer.value
+    counter: selectCounterOld(state), // state.counterReducer.value
     // ...
 });
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSelector} from "react-redux";
-import {selectUser, selectUserStatus} from "../store/reducers/user";
+import {selectUser, selectUserStatus} from "../store/old/reducers/user";
 
 const UserFromApi = () => {
     const userData = useSelector(selectUser);

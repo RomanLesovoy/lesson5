@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSelector} from "react-redux";
-import {selectUniversities} from "../store/reducers/universities";
+import {selectUniversities} from "../store/new/reducers/universities";
 
 const Universities = () => {
     const universities = useSelector(selectUniversities);
